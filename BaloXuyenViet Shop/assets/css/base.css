@@ -1,0 +1,139 @@
+:root{
+    --text-color:#333;
+    --base-color:#d7def8;
+    --base-text:#5376f1;
+    --button-color:#6383f7;
+    --navbar-height:38px;
+    --header-height:150px;
+    --search-height:calc(var(--header-height) - var(--navbar-height));
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%; 
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/*Responsive*/
+
+.grid{
+    width:1300px;
+    max-width:100%;
+    margin:0 auto;
+}
+
+.grid__full-width{
+    width:100%;
+}
+
+.grid__row{
+    display:flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right:-5px;
+}
+
+.grid__column-2{
+    padding-left: 5px;
+    padding-right:5px;
+    width: 16.6667%;
+}
+
+.grid__column-2-4{
+    padding-left: 5px;
+    padding-right:5px;
+    width: 20%;
+}
+
+.grid__column-10{
+    width: 83.3333%;
+    padding-left: 5px;
+    padding-right:5px;
+}
+
+
+
+
+/*animation*/
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*Modal*/
+
+.modal{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    animation: fadeIn linear 0.3s;
+}
+
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,0.4) ;
+   
+}
+
+.modal__body{
+    width:530px;
+    height:550px;
+    background-color: white;
+    margin: auto;
+    z-index: 1;
+    border-radius: 3px;
+}
+
+/*button*/
+.btn{
+    min-width: 140px;
+    height: 40px;
+    text-decoration: none;
+    outline: none;
+    border-radius: 2px;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+.btn.btn--primary{
+    background-color:rgb(189, 223, 37) ;
+    color: black;
+    width: 400px;
+}
+
+.btn.btn--fb{
+    background-color:rgb(59, 89, 152) ;
+    color: white;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn.btn--gg{
+    background-color:rgb(243, 45, 38) ;
+    color: white;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
